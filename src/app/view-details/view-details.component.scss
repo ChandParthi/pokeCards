@@ -1,0 +1,132 @@
+.poke_card{
+    border: 20px solid #fec723;
+    border-radius: 40px;
+    padding: 2em;
+    opacity: 0.9;
+}
+
+.title{
+    color: black;
+    text-align: initial;
+}
+
+.container{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.poke_img{
+    background-image: url('../../assets/arena.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 20px 4px #e9b826;
+    border: 7px solid #e9b826;
+    img{
+        width: 200px;
+
+    }
+
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    p{
+        color: #000;
+        margin: 0;
+        font-size: 13px;
+    }
+}
+
+hr{
+    color: black;
+    height: 3px;
+    opacity: 0.7;
+    margin: 5px;
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .desc{
+        font-size: 12px;
+        margin-right: 22px;
+        text-align: left;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    span{
+        color: black;
+    }
+}
+
+.subAbility{
+    span{
+        float: left;
+        color: black;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+}
+
+.ribbon{
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+    text-align: center;
+  }
+  .text{
+    color: #000;
+    display:inline-block;
+    padding:0.5em 1em;
+    min-width: 23em;
+    line-height:1.2em;
+    background: #FFD72A;
+    position:relative;
+  }
+  .ribbon:after,.ribbon:before,
+  .text:before,.text:after,
+  .bold:before{
+    content:'';
+    position:absolute;
+    border-style:solid;
+  }
+  .ribbon:before{
+    top:0.3em; left:0.2em;
+    width:100%; height:100%;
+    border:none;
+    // background:#EBECED;
+    z-index:-2;
+  }
+  .text:before{
+    bottom:100%; left:0;
+    border-width: .5em .7em 0 0;
+    border-color: transparent #FC9544 transparent transparent;
+  }
+  .text:after{
+    top:100%; right:0;
+    border-width: .5em 2em 0 0;
+    border-color: #FC9544 transparent transparent transparent;
+  }
+  .ribbon:after, .bold:before{
+    top:0.5em;right:-2em;
+    border-width: 1.1em 1em 1.1em 3em;
+    border-color: #FECC30 transparent #FECC30 #FECC30;
+    z-index:-1;
+  }
+  .bold:before{
+    border-color: #EBECED transparent #EBECED #EBECED;
+    top:0.7em;
+    right:-2.3em;
+  }
+  

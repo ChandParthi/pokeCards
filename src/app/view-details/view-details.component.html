@@ -1,0 +1,54 @@
+<ng-container *ngIf="pokemon">
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="poke_card bg bg-{{getType(pokemon)}}">
+                    <div class="row">
+                        <div class="">
+                            <div class="title">
+                                <h1>{{pokemon.name | titlecase}}</h1>
+                            </div>
+                            <div class="poke_img">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemon.id}}.png" alt="">
+                            </div>
+
+                            <div>
+                                <p class="ribbon">
+                                    <span class="text"><strong class="bold">Seed Pokemon. Height:{{pokemon.height}}, Weight: {{pokemon.weight}}</strong></span>
+                                  </p>
+                                  <div class="description">
+                                    <span class="desc">{{abilities}}</span> 
+                                    <span><strong>{{pokemon.base_experience}}</strong></span>
+                                  </div>
+                            </div>
+
+                            <div class="footer">
+                                <hr>
+                                <div class="stats">
+                                    <p>Weakness</p>
+                                    <p>Resistance</p>
+                                    <p>retreat cost</p>
+                                </div>
+
+                                <div class="subAbility">
+                                    <span>{{subAbility}}</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-absolute top-0 start-0">
+        <a class="btn btn-lg" [routerLink]="['/']">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+        </a>
+    </div>
+</ng-container>
